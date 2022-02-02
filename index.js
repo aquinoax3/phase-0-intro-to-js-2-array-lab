@@ -1,41 +1,47 @@
 // Write your solution here!
 
-//copyCats = [...cats];
+const cats = ["Milo", "Otis", "Garfield"];
 
-//const copyCats = [...cats]
-
-const cats = ["Milo", "Otis", "Garfield"]
 
 function destructivelyAppendCat(name) {
-    return cats.push(name);
+      
+    return cats.push(name); // adds/appends element to the back of an array
 }
 
 function destructivelyPrependCat(name) {
-    return cats.unshift(name);
+    return cats.unshift(name); // adds element to the front of an array
 }
 
-function destructivelyRemoveLastCat(name) {
-    return cats.pop(name);
+function destructivelyRemoveLastCat() {
+    return cats.pop(); //removes element from the back of an array
 }
 
-function destructivelyRemoveFirstCat(name) {
-    return cats.shift(name);
+function destructivelyRemoveFirstCat() {
+    return cats.shift(); //removes element from the front of an array
+
 }
+
+
 
 function appendCat(name) {
-    const copyCats = [...cats, (name)];
-    return copyCats;
+    
+    const newCats = [...cats, name];
+    
+    return newCats;
 }
 
 function prependCat(name) {
-    const copyCats = [(name),...cats]
-    return copyCats;
+    const newCats = [name, ...cats]
+
+    return newCats;
+
 }
 
+
 function removeLastCat() {
-    return cats.slice(0, cats.length -1);
+    return cats.slice(0,cats.length -1)
 }
 
 function removeFirstCat() {
-    return cats.slice(1);
+    return cats.slice(1)
 }
